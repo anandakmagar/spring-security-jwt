@@ -1,7 +1,7 @@
-package com.securityservice.config;
+package com.securityservice.security_configuration;
 
-import jakarta.servlet.Filter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -17,8 +17,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
-    private final AuthenticationProvider authenticationProvider;
-    private final JWTAuthenticationFilter jwtAthenticationFilter;
+    @Autowired
+    private AuthenticationProvider authenticationProvider;
+    @Autowired
+    private JWTAuthenticationFilter jwtAthenticationFilter;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {

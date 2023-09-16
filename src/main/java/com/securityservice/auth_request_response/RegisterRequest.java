@@ -1,4 +1,4 @@
-package com.securityservice.auth;
+package com.securityservice.auth_request_response;
 
 import com.securityservice.model.Role;
 import jakarta.persistence.EnumType;

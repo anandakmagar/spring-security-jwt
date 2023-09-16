@@ -1,4 +1,4 @@
-package com.securityservice.auth;
+package com.securityservice.auth_request_response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class AuthenticationResponse {
-    private String jwt;
-
+public class AuthenticationRequest {
+    private String username;
+    private String password;
 }

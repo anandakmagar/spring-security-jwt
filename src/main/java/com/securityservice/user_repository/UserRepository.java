@@ -1,4 +1,4 @@
-package com.securityservice.repository;
+package com.securityservice.user_repository;
 
 import com.securityservice.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
