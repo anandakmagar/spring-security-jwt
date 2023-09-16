@@ -1,0 +1,23 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8084
+spring:
+  application:
+    name: security-service
+  datasource:
+    initialization-mode: always
+    password: rootroot
+    platform: mysql
+    url: jdbc:mysql://localhost:3306/security_management
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        format_sql: true
+    show: true
